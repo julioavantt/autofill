@@ -4,86 +4,142 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Autofill</title>
+    <!DOCTYPE html>
+    <html lang="es">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Test Autofill</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+          }
+          form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 40vw;
+            margin: 15px 0 0 0;
+          }
+          h2 {
+            text-align: center;
+            margin-bottom: 20px;
+          }
+          div {
+            width: 48%;
+            float: left;
+            margin-bottom: 15px;
+          }
+          div:nth-child(odd) {
+            margin-right: 30px;
+          }
+          label {
+            display: block;
+            margin: 5px 0 7px;
+          }
+          input {
+            width: 100%;
+            padding: 8px 0;
+            margin-bottom: 0px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+          }
+          button {
+            width: 100%;
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+          }
+          button:hover {
+            background: #0056b3;
+          }
+        </style>
+      </head>
+      <body>
+        <form>
+          <div>
+            <label for="name">Nombre completo:</label>
+            <input type="text" id="name" name="name" autocomplete="name" />
+          </div>
+          <div>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" autocomplete="email" />
+          </div>
+          <div>
+            <label for="tel">Teléfono:</label>
+            <input type="tel" id="tel" name="tel" autocomplete="tel" />
+          </div>
+          <div>
+            <label for="address">Dirección:</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              autocomplete="street-address"
+            />
+          </div>
+          <div>
+            <label for="city">Ciudad:</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              autocomplete="address-level2"
+            />
+          </div>
+          <div>
+            <label for="zip">Código Postal:</label>
+            <input type="text" id="zip" name="zip" autocomplete="postal-code" />
+          </div>
+          <div>
+            <label for="cc-name">Nombre en tarjeta:</label>
+            <input
+              type="text"
+              id="cc-name"
+              name="cc-name"
+              autocomplete="cc-name"
+            />
+          </div>
+          <div>
+            <label for="cc-number">Número de tarjeta de crédito:</label>
+            <input
+              type="text"
+              id="cc-number"
+              name="cc-number"
+              autocomplete="cc-number"
+            />
+          </div>
+          <div>
+            <label for="cc-exp">Fecha de expiración:</label>
+            <input
+              type="text"
+              id="cc-exp"
+              name="cc-exp"
+              autocomplete="cc-exp"
+            />
+          </div>
+          <div>
+            <label for="cc-csc">Código de seguridad:</label>
+            <input
+              type="text"
+              id="cc-csc"
+              name="cc-csc"
+              autocomplete="cc-csc"
+            />
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </body>
+    </html>
   </head>
-  <body>
-    <h2>Formulario de prueba para Autofill</h2>
-    <form>
-      <label for="name">Nombre completo:</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        autocomplete="name"
-      /><br /><br />
-
-      <label for="email">Correo electrónico:</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        autocomplete="email"
-      /><br /><br />
-
-      <label for="tel">Teléfono:</label>
-      <input type="tel" id="tel" name="tel" autocomplete="tel" /><br /><br />
-
-      <label for="address">Dirección:</label>
-      <input
-        type="text"
-        id="address"
-        name="address"
-        autocomplete="street-address"
-      /><br /><br />
-
-      <label for="city">Ciudad:</label>
-      <input
-        type="text"
-        id="city"
-        name="city"
-        autocomplete="address-level2"
-      /><br /><br />
-
-      <label for="zip">Código Postal:</label>
-      <input
-        type="text"
-        id="zip"
-        name="zip"
-        autocomplete="postal-code"
-      /><br /><br />
-
-      <label for="cc-name">Nombre en tarjeta:</label>
-      <input
-        type="text"
-        id="cc-name"
-        name="cc-name"
-        autocomplete="cc-name"
-      /><br /><br />
-
-      <label for="cc-number">Número de tarjeta de crédito:</label>
-      <input
-        type="text"
-        id="cc-number"
-        name="cc-number"
-        autocomplete="cc-number"
-      /><br /><br />
-
-      <label for="cc-exp">Fecha de expiración:</label>
-      <input
-        type="text"
-        id="cc-exp"
-        name="cc-exp"
-        autocomplete="cc-exp"
-      /><br /><br />
-
-      <label for="cc-csc">Código de seguridad:</label>
-      <input
-        type="text"
-        id="cc-csc"
-        name="cc-csc"
-        autocomplete="cc-csc"
-      /><br /><br />
-
-      <button type="submit">Enviar</button>
-    </form>
-  </body>
 </html>
